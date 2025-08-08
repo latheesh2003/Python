@@ -1,0 +1,20 @@
+def binary_search(arr,x):
+  low=1
+  high=len(arr)
+  
+  
+  while low<=high:
+    mid=low+(high-low)//2
+    if arr[mid]==x:
+      return mid
+    elif arr[mid]<x:
+      low=mid+1
+    else:
+      high=mid-1
+      
+  return -1
+    
+arr = [2, 3, 4, 10, 40]
+print(arr)
+x=10
+print(binary_search(arr,x))
